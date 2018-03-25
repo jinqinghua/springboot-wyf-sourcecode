@@ -5,15 +5,15 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class DemoService {
-	@Value("ÆäËûÀàµÄÊôÐÔ") //1
+    @Value("å…¶ä»–ç±»çš„å±žæ€§") //1
     private String another;
 
-	public String getAnother() {
-		return another;
-	}
+    public String getAnother() {
+        return another;
+    }
 
-	public void setAnother(String another) {
-		this.another = another;
-	}
-	
+    public void setAnother(String another) {
+        this.another = another;
+    }
+
 }

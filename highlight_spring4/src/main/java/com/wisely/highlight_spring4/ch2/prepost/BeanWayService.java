@@ -1,14 +1,16 @@
 package com.wisely.highlight_spring4.ch2.prepost;
 
 public class BeanWayService {
-	  public void init(){
-	        System.out.println("@Bean-init-method");
-	    }
-	    public BeanWayService() {
-	        super();
-	        System.out.println("³õÊ¼»¯¹¹Ôìº¯Êı-BeanWayService");
-	    }
-	    public void destroy(){
-	        System.out.println("@Bean-destory-method");
-	    }
+    public void init() {
+        System.out.println("@Bean-init-method");
+    }
+
+    public BeanWayService() {
+        super();
+        System.out.println("åˆå§‹åŒ–æ„é€ å‡½æ•°-BeanWayService");
+    }
+
+    public void destroy() {
+        System.out.println("@Bean-destory-method");
+    }
 }

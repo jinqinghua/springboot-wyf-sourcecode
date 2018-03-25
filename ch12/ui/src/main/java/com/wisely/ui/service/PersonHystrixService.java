@@ -21,7 +21,7 @@ public class PersonHystrixService {
 	
 	public List<Person> fallbackSave(String name){ 
 		List<Person> list = new ArrayList<>();
-		Person p = new Person(name+"没有保存成功，Person Service 故障");
+		Person p = new Person(name+"娌℃湁淇濆瓨鎴愬姛锛孭erson Service 鏁呴殰");
 		list.add(p);
 		return list;
 	}

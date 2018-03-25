@@ -18,6 +18,6 @@ public class SomeHystrixService {
 	}
 	
 	public String fallbackSome(){ 
-		return "some service模块故障";
+		return "some service妯″潡鏁呴殰";
 	}
 }

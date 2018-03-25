@@ -1,7 +1,5 @@
 package com.wisely.highlight_spring4.ch3.aware;
 
-import java.io.IOException;
-
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ResourceLoaderAware;
@@ -9,35 +7,37 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
 
-@Service
-public class AwareService implements BeanNameAware,ResourceLoaderAware{//1
-	
-	private String beanName;
-	private ResourceLoader loader;
-	
-	@Override
-	public void setResourceLoader(ResourceLoader resourceLoader) {//2
-		this.loader = resourceLoader;
-	}
+import java.io.IOException;
 
-	@Override
-	public void setBeanName(String name) {//3
-		this.beanName = name;
-	}
-	
-	public void outputResult(){
-		System.out.println("BeanµÄÃû³ÆÎª£º" + beanName);
-		
-		Resource resource = 
-				loader.getResource("classpath:com/wisely/highlight_spring4/ch3/aware/test.txt");
-		try{
-			
-			System.out.println("ResourceLoader¼ÓÔØµÄÎÄ¼şÄÚÈİÎª: " + IOUtils.toString(resource.getInputStream()));
-			
-		   }catch(IOException e){
-			e.printStackTrace();
-		   }
-	
-	}
+@Service
+public class AwareService implements BeanNameAware, ResourceLoaderAware {//1
+
+    private String beanName;
+    private ResourceLoader loader;
+
+    @Override
+    public void setResourceLoader(ResourceLoader resourceLoader) {//2
+        this.loader = resourceLoader;
+    }
+
+    @Override
+    public void setBeanName(String name) {//3
+        this.beanName = name;
+    }
+
+    public void outputResult() {
+        System.out.println("Beançš„åç§°ä¸ºï¼š" + beanName);
+
+        Resource resource =
+                loader.getResource("classpath:com/wisely/highlight_spring4/ch3/aware/test.txt");
+        try {
+
+            System.out.println("ResourceLoaderåŠ è½½çš„æ–‡ä»¶å†…å®¹ä¸º: " + IOUtils.toString(resource.getInputStream()));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 
 }

@@ -11,7 +11,7 @@ public class CsvItemProcessor  extends ValidatingItemProcessor<Person>{
 	public Person process(Person item) throws ValidationException {
 		super.process(item); //1
 		
-		if(item.getNation().equals("汉族")){ //2
+		if(item.getNation().equals("姹夋棌")){ //2
 			item.setNation("01");
 		}else{
 			item.setNation("02");

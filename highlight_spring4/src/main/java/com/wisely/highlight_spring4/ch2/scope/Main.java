@@ -4,18 +4,18 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class Main {
 
-	public static void main(String[] args) {
-		AnnotationConfigApplicationContext context =
-                new AnnotationConfigApplicationContext(ScopeConfig.class); 
-		DemoSingletonService s1 = context.getBean(DemoSingletonService.class);
+    public static void main(String[] args) {
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext(ScopeConfig.class);
+        DemoSingletonService s1 = context.getBean(DemoSingletonService.class);
         DemoSingletonService s2 = context.getBean(DemoSingletonService.class);
 
         DemoPrototypeService p1 = context.getBean(DemoPrototypeService.class);
         DemoPrototypeService p2 = context.getBean(DemoPrototypeService.class);
 
-        System.out.println("s1”Îs2 «∑Òœ‡µ»£∫"+s1.equals(s2));
-        System.out.println("p1”Îp2 «∑Òœ‡µ»£∫"+p1.equals(p2));
-        
+        System.out.println("s1‰∏és2ÊòØÂê¶Áõ∏Á≠âÔºö" + s1.equals(s2));
+        System.out.println("p1‰∏ép2ÊòØÂê¶Áõ∏Á≠âÔºö" + p1.equals(p2));
+
         context.close();
-	}
+    }
 }

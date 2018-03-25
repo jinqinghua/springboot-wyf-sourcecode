@@ -17,7 +17,7 @@ public class CustomUserService implements UserDetailsService { //1
 		
 		SysUser user = userRepository.findByUsername(username); 
 		if(user == null){
-			throw new UsernameNotFoundException("用户名不存在");
+			throw new UsernameNotFoundException("鐢ㄦ埛鍚嶄笉瀛樺湪");
 		}
 		
 		return user; //3
